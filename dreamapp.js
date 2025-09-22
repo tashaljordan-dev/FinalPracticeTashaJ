@@ -26,19 +26,19 @@ function addBook() {
     ];
 
 // Pick a random affirmation // operations // conditionals // strings //userinput 
-    let randomIndex = Math.floor(Math.random() * affirmations.length);
+    let randomIndex = Math.floor(Math.random() * affirmations.length); // assign affirmations to numbers and pick a random number; rounded to a whole number
     console.log(`Author ${author} ${affirmations[randomIndex]}`);
-    let genre = readline.question("Enter the book genre: ");
+    let genre = readline.question("Enter the book genre: "); //operations//vtdo//user inputs the genre
     console.log(`Oh, I love ${genre} books too!`); // Respond to genre // creating and using objects using the math module 
-    let pages = Number(readline.question("Enter the number of pages: "));
-    if (pages > 500) {
+    let pages = Number(readline.question("Enter the number of pages: "));//user inputs the number of pages 
+    if (pages > 500) {//user gets feedback based on the number of pages. 
         console.log("Oh, that'll be a killer!");
     } else if (pages < 100) {
         console.log("That'll be an easy read!");
     } else {
         console.log("Sounds like a nice length!");
     }
-    let rating = Number(readline.question("Rate the book (1-5): "));
+    let rating = Number(readline.question("Rate the book (1-5): "));//user rates the book with a number 1-5
 
     // Create a book object // object
     let book = {
@@ -47,7 +47,7 @@ function addBook() {
         genre: genre,
         pages: pages,
         rating: rating,
-        // using a loop to give a recommendation //conditionals // control structures and logic // 
+        // using conditionals give a recommendation //conditionals // control structures and logic // vtdo //function 
         recommend: function() {
             if (rating >= 4) return "Highly recommended!";
             else if (rating >= 2) return "Worth a read.";
@@ -55,7 +55,7 @@ function addBook() {
         }
     };
 
-    // Add the book to the array // using arrays //strings 
+    // Add the book to the array // using arrays //strings .. using arrays 
     books.push(book);
     console.log(`\n"${title}" by ${author} has been added to your library!\n`);
 }
@@ -68,7 +68,7 @@ function displayAllBooks() {
     for (let i = 0; i < books.length; i++) {
         let book = books[i];
         console.log(
-            `${i + 1}. ${book.title} (${book.genre}) - ${book.pages} pages | Rating: ${book.rating} stars`
+            `${i + 1}. ${book.title} (${book.genre}) - ${book.pages} pages | Rating: ${book.rating} stars`//temperate literals; strings; 
         );
         console.log(`   Recommendation: ${book.recommend()}\n`);
         totalPages += book.pages; // Add to total pages
@@ -81,12 +81,12 @@ function displayAllBooks() {
 let numBooks = Number(readline.question("How many books do you want to enter? "));
 
 // Use a for loop to add that many books
-for (let i = 0; i < numBooks; i++) {
-    console.log(`\n--- Enter Book ${i + 1} ---`);
+for (let i = 0; i < numBooks; i++) {// from 'arrays' 
+    console.log(`\n--- Enter Book ${i + 1} ---`); 
     addBook();
 }
 
 // Display all books at the end
 displayAllBooks();
 
-console.log(`\nThank you for adding ${numBooks} books to BookWorm! Happy Reading! \u263A"`);
+console.log(`\nThank you for adding ${numBooks} books to BookWorm! Happy Reading! \u263A"`); //unicode! // temperate literals/ strings
