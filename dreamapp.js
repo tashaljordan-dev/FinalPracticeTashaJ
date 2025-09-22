@@ -16,7 +16,7 @@ function addBook() {
     console.log(`I like "${title}" too!`); // Respond to the book title
     let author = readline.question("Enter the author of the book: ");
 
-// Array of possible affirmations // reply to book author
+// Array of possible affirmations // reply to book author // operations // vtdo 
     let affirmations = [
     "is phenomenal!",
     "is amazing!",
