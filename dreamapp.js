@@ -1,22 +1,22 @@
 // BookWorm App - Interactive Version
 
-// Import readline-sync for user input
+// Import readline-sync for user input // values, data types, and operations
 const readline = require('readline-sync');
 
 // Array for all books
 let books = [];
 
-// Add a new book using function; values, data types, and operations
+// Add a new book using function; values, data types, and operations (VDTO)
 // Stringing Characters
 // Template Literals 
 // User Input 
 function addBook() {
-    // Ask user for book details
+    // Ask user for book details // VTDO
     let title = readline.question("Enter the book title: ");
     console.log(`I like "${title}" too!`); // Respond to the book title
     let author = readline.question("Enter the author of the book: ");
 
-// Array of possible affirmations
+// Array of possible affirmations // reply to book author
     let affirmations = [
     "is phenomenal!",
     "is amazing!",
@@ -29,14 +29,14 @@ function addBook() {
     let randomIndex = Math.floor(Math.random() * affirmations.length);
     console.log(`Author ${author} ${affirmations[randomIndex]}`);
     let genre = readline.question("Enter the book genre: ");
-    console.log(`Oh, I love ${genre} books too!`); // Respond to genre
+    console.log(`Oh, I love ${genre} books too!`); // Respond to genre // creating and using objects using the math module 
     let pages = Number(readline.question("Enter the number of pages: "));
     if (pages > 500) {
         console.log("Oh, that'll be a killer!");
     } else if (pages < 100) {
         console.log("That'll be an easy read!");
     } else {
-        console.log("Sounds like a nice length.");
+        console.log("Sounds like a nice length!");
     }
     let rating = Number(readline.question("Rate the book (1-5): "));
 
@@ -47,8 +47,7 @@ function addBook() {
         genre: genre,
         pages: pages,
         rating: rating,
-        // Method to give recommendation
-        // using a loop
+        // using a loop to give a recommendation //conditionals // control structures and logic // 
         recommend: function() {
             if (this.rating >= 4) return "Highly recommended!";
             else if (this.rating >= 2) return "Worth a read.";
