@@ -49,8 +49,8 @@ function addBook() {
         rating: rating,
         // using a loop to give a recommendation //conditionals // control structures and logic // 
         recommend: function() {
-            if (this.rating >= 4) return "Highly recommended!";
-            else if (this.rating >= 2) return "Worth a read.";
+            if (rating >= 4) return "Highly recommended!";
+            else if (rating >= 2) return "Worth a read.";
             else return "Maybe try a different book next time.";
         }
     };
