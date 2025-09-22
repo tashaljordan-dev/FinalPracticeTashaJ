@@ -74,7 +74,7 @@ function displayAllBooks() {
         totalPages += book.pages; // Add to total pages
     }
 
-    console.log(`Total pages read: ${totalPages}`);
+    console.log(`Total pages read: ${totalPages}`); //temperate literals // character strings
 }
 
 // Ask the user how many books they want to enter
