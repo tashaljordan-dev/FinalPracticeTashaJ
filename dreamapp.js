@@ -1,5 +1,3 @@
-// BookWorm App - Interactive Version
-
 // Import readline-sync for user input // values, data types, and operations
 const readline = require('readline-sync');
 
