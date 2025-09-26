@@ -18,7 +18,7 @@ function addBook() {
     let affirmations = [
     "is phenomenal!",
     "is amazing!",
-    "is a fantastic writer!",
+    "is a fantastic writer!".
     "is a genius!",
     "writes beautifully!"
     ];
